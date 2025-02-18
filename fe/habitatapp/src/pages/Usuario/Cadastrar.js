@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Usuario.css';
+import './Cadastrar.css';  
 
 const Cadastro = () => {
   const [nome, setNome] = useState('');
@@ -13,7 +13,7 @@ const Cadastro = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/usuario', { nome, email, senha });
+      const response = await axios.post('http://localhost:3000/cadastro', { nome, email, senha });
 
       // Verificando o código de status da resposta
       if (response.status === 201) {
