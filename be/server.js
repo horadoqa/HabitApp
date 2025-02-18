@@ -101,7 +101,6 @@ app.delete('/usuario', verificarToken, async (req, res) => {
 });
 
 
-
 // Rota de login
 app.post('/login', async (req, res) => {
   const { email, senha } = req.body;
@@ -135,18 +134,6 @@ app.post('/login', async (req, res) => {
   }
 });
 
-
-// Rota para criar um novo apartamento
-// app.post('/apartamento', verificarToken, async (req, res) => {
-//   try {
-//     const novoApartamento = new apt(req.body);
-//     await novoApartamento.save();
-//     res.status(201).json(novoApartamento);
-//   } catch (err) {
-//     res.status(400).json({ message: 'Erro ao criar apartamento', error: err });
-//   }
-// });
-
 // Rota para receber o cadastro de apartamento
 app.post('/apartamento', verificarToken, async (req, res) => {
   try {
@@ -164,6 +151,22 @@ app.post('/apartamento', verificarToken, async (req, res) => {
     res.status(201).json({ message: 'Apartamento cadastrado com sucesso!', data: novoApartamento });
   } catch (error) {
     res.status(400).json({ error: error.message });
+  }
+});
+
+
+// Rota para buscar um apartamento específico por número
+app.get('/apartamento/:numeroApartamento', async (req, res) => {
+  const { numeroApartamento } = req.params;
+  
+  try {
+    const apartamento = await Apartamento.findOne({ apartamento: numeroApartamento });
+    if (!apartamento) {
+      return res.status(404).json({ message: 'Apartamento não encontrado' });
+    }
+    res.status(200).json(apartamento);
+  } catch (error) {
+    res.status(500).json({ message: 'Erro ao buscar apartamento', error: error.message });
   }
 });
 
