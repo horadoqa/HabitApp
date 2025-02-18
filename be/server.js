@@ -171,14 +171,17 @@ app.get('/apartamento/:numeroApartamento', async (req, res) => {
 });
 
 // Rota para buscar todos os apartamentos
-app.get('/apartamento', async (req, res) => {
+app.get('/apartamentos', async (req, res) => {
   try {
-    const apartamentos = await apt.find();
+    // Certifique-se de que o modelo correto está sendo utilizado
+    const apartamentos = await Apartamento.find();
     res.status(200).json(apartamentos);
   } catch (err) {
-    res.status(400).json({ message: 'Erro ao buscar apartamentos', error: err });
+    console.error('Erro ao buscar apartamentos:', err);
+    res.status(400).json({ message: 'Erro ao buscar apartamentos', error: err.message });
   }
 });
+
 
 // Rota para criar um novo condomínio
 app.post('/condominio', verificarToken, async (req, res) => {
