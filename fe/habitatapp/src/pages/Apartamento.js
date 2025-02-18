@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './Apartamento.css';
 
 const Apartamento = () => {
   const [apartamento, setApartamento] = useState('');
@@ -7,6 +6,7 @@ const Apartamento = () => {
   const [moradores, setMoradores] = useState(['', '']);
   const [vistoriaGás, setVistoriaGás] = useState('');
   const [vistoriaÁgua, setVistoriaÁgua] = useState('');
+  const [tipoPessoa, setTipoPessoa] = useState(''); // Estado para o tipo (Locador ou Locatário)
 
   // Função para atualizar o estado dos moradores
   const handleMoradorChange = (index, value) => {
@@ -24,6 +24,7 @@ const Apartamento = () => {
       apartamento,
       telefone_contato: telefoneContato,
       moradores,
+      tipo_pessoa: tipoPessoa, // Adicionando tipo de pessoa (Locador ou Locatário)
       vistoria: {
         gás: vistoriaGás,
         água: vistoriaÁgua,
@@ -78,6 +79,19 @@ const Apartamento = () => {
             />
           </div>
 
+          {/* Select para Locador ou Locatário */}
+          <label htmlFor="tipoPessoa">Condição</label>
+          <select
+            id="tipoPessoa"
+            value={tipoPessoa}
+            onChange={(e) => setTipoPessoa(e.target.value)}
+            required
+          >
+            <option value="">Selecione</option>
+            <option value="locador">Locador</option>
+            <option value="locatário">Locatário</option>
+          </select>
+
           <label htmlFor="vistoria_gas">Vistoria de Gás:</label>
           <input
             type="date"
@@ -95,6 +109,8 @@ const Apartamento = () => {
             onChange={(e) => setVistoriaÁgua(e.target.value)}
             required
           />
+
+          
 
           <button type="submit">Cadastrar Apartamento</button>
         </form>
