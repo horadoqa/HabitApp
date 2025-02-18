@@ -1,0 +1,856 @@
+{
+  "edificio": [
+    {
+      "apartamento": 101,
+      "telefone_contato": "+55 11 91234-0001",
+      "moradores": [
+        "João Silva",
+        "Maria Oliveira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 102,
+      "telefone_contato": "+55 11 91234-0002",
+      "moradores": [
+        "Carlos Pereira",
+        "Ana Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 103,
+      "telefone_contato": "+55 11 91234-0003",
+      "moradores": [
+        "Lucas Mendes",
+        "Fernanda Santos"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 104,
+      "telefone_contato": "+55 11 91234-0004",
+      "moradores": [
+        "Rafael Gomes"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 105,
+      "telefone_contato": "+55 11 91234-0005",
+      "moradores": [
+        "Juliana Rocha",
+        "Carlos Lima"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 106,
+      "telefone_contato": "+55 11 91234-0006",
+      "moradores": [
+        "Patrícia Alves",
+        "Gustavo Ferreira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 201,
+      "telefone_contato": "+55 11 91234-0007",
+      "moradores": [
+        "Marcelo Souza",
+        "Beatriz Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 202,
+      "telefone_contato": "+55 11 91234-0008",
+      "moradores": [
+        "Ricardo Silva",
+        "Juliana Pires"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 203,
+      "telefone_contato": "+55 11 91234-0009",
+      "moradores": [
+        "Fernanda Oliveira",
+        "Pedro Lima"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 204,
+      "telefone_contato": "+55 11 91234-0010",
+      "moradores": [
+        "André Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 205,
+      "telefone_contato": "+55 11 91234-0011",
+      "moradores": [
+        "Gabriela Costa",
+        "Lucas Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 206,
+      "telefone_contato": "+55 11 91234-0012",
+      "moradores": [
+        "Carlos Eduardo",
+        "Carolina Silva"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 301,
+      "telefone_contato": "+55 11 91234-0013",
+      "moradores": [
+        "José Almeida",
+        "Tatiane Pereira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 302,
+      "telefone_contato": "+55 11 91234-0014",
+      "moradores": [
+        "Luana Costa",
+        "Gustavo Mendes"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 303,
+      "telefone_contato": "+55 11 91234-0015",
+      "moradores": [
+        "Rita Santos",
+        "Ricardo Pereira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 304,
+      "telefone_contato": "+55 11 91234-0016",
+      "moradores": [
+        "Fábio Almeida"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 305,
+      "telefone_contato": "+55 11 91234-0017",
+      "moradores": [
+        "Simone Rocha",
+        "Leandro Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 306,
+      "telefone_contato": "+55 11 91234-0018",
+      "moradores": [
+        "Cláudia Lima",
+        "Felipe Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 401,
+      "telefone_contato": "+55 11 91234-0019",
+      "moradores": [
+        "Carla Silva",
+        "Eduardo Rocha"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 402,
+      "telefone_contato": "+55 11 91234-0020",
+      "moradores": [
+        "Marco Pereira",
+        "Patrícia Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 403,
+      "telefone_contato": "+55 11 91234-0021",
+      "moradores": [
+        "Luiz Almeida",
+        "Sandra Souza"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 404,
+      "telefone_contato": "+55 11 91234-0022",
+      "moradores": [
+        "José Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 405,
+      "telefone_contato": "+55 11 91234-0023",
+      "moradores": [
+        "Ana Lima",
+        "Felipe Rocha"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 406,
+      "telefone_contato": "+55 11 91234-0024",
+      "moradores": [
+        "Fernanda Costa",
+        "Roberto Lima"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 501,
+      "telefone_contato": "+55 11 91234-0025",
+      "moradores": [
+        "Marcos Pereira",
+        "Cíntia Souza"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 502,
+      "telefone_contato": "+55 11 91234-0026",
+      "moradores": [
+        "Laura Lima",
+        "André Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 503,
+      "telefone_contato": "+55 11 91234-0027",
+      "moradores": [
+        "Regina Santos",
+        "Renato Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 504,
+      "telefone_contato": "+55 11 91234-0028",
+      "moradores": [
+        "Gustavo Ferreira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 505,
+      "telefone_contato": "+55 11 91234-0029",
+      "moradores": [
+        "Patrícia Oliveira",
+        "Thiago Souza"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 506,
+      "telefone_contato": "+55 11 91234-0030",
+      "moradores": [
+        "Luciana Almeida",
+        "Carlos Souza"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 601,
+      "telefone_contato": "+55 11 91234-0031",
+      "moradores": [
+        "Fabiana Lima",
+        "Paulo Rocha"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 602,
+      "telefone_contato": "+55 11 91234-0032",
+      "moradores": [
+        "Eliane Costa",
+        "Alexandre Pereira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 603,
+      "telefone_contato": "+55 11 91234-0033",
+      "moradores": [
+        "João Costa",
+        "Maria Santos"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 604,
+      "telefone_contato": "+55 11 91234-0034",
+      "moradores": [
+        "Tiago Lima"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 605,
+      "telefone_contato": "+55 11 91234-0035",
+      "moradores": [
+        "Carla Rocha",
+        "Jorge Pereira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 606,
+      "telefone_contato": "+55 11 91234-0036",
+      "moradores": [
+        "Fábio Silva",
+        "Cristiane Almeida"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 701,
+      "telefone_contato": "+55 11 91234-0037",
+      "moradores": [
+        "Rogério Costa",
+        "Gisele Souza"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 702,
+      "telefone_contato": "+55 11 91234-0038",
+      "moradores": [
+        "Marcos Silva",
+        "Lúcia Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 703,
+      "telefone_contato": "+55 11 91234-0039",
+      "moradores": [
+        "Renato Costa",
+        "Sofia Rocha"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 704,
+      "telefone_contato": "+55 11 91234-0040",
+      "moradores": [
+        "Adriana Oliveira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 705,
+      "telefone_contato": "+55 11 91234-0041",
+      "moradores": [
+        "Ricardo Martins",
+        "Amanda Silva"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 706,
+      "telefone_contato": "+55 11 91234-0042",
+      "moradores": [
+        "Luana Rocha",
+        "Felipe Almeida"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 801,
+      "telefone_contato": "+55 11 91234-0043",
+      "moradores": [
+        "Juliana Lima",
+        "Gustavo Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 802,
+      "telefone_contato": "+55 11 91234-0044",
+      "moradores": [
+        "Sandra Rocha",
+        "Paulo Lima"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 803,
+      "telefone_contato": "+55 11 91234-0045",
+      "moradores": [
+        "Mariana Almeida",
+        "Carlos Pereira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 804,
+      "telefone_contato": "+55 11 91234-0046",
+      "moradores": [
+        "Elaine Souza"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 805,
+      "telefone_contato": "+55 11 91234-0047",
+      "moradores": [
+        "Fátima Rocha",
+        "Alex Silva"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+        "apartamento": 806,
+        "telefone_contato": "+55 11 91234-0048",
+        "moradores": [
+          "Fátima Rocha",
+          "Alex Silva"
+        ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 901,
+      "telefone_contato": "+55 11 91234-0049",
+      "moradores": [
+        "Júlio Almeida",
+        "Lúcia Rocha"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 902,
+      "telefone_contato": "+55 11 91234-0050",
+      "moradores": [
+        "Eduardo Silva",
+        "Cássia Pires"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 903,
+      "telefone_contato": "+55 11 91234-0051",
+      "moradores": [
+        "Gustavo Rocha",
+        "Tatiane Lima"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 904,
+      "telefone_contato": "+55 11 91234-0052",
+      "moradores": [
+        "Alfredo Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 905,
+      "telefone_contato": "+55 11 91234-0053",
+      "moradores": [
+        "Fabiola Martins",
+        "João Silva"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 906,
+      "telefone_contato": "+55 11 91234-0054",
+      "moradores": [
+        "Amanda Lima",
+        "Roberto Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1001,
+      "telefone_contato": "+55 11 91234-0055",
+      "moradores": [
+        "Fábio Rocha",
+        "Alessandra Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1002,
+      "telefone_contato": "+55 11 91234-0056",
+      "moradores": [
+        "Ricardo Costa",
+        "Juliana Lima"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1003,
+      "telefone_contato": "+55 11 91234-0057",
+      "moradores": [
+        "Patrícia Martins",
+        "Carlos Pires"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1004,
+      "telefone_contato": "+55 11 91234-0058",
+      "moradores": [
+        "Mário Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1005,
+      "telefone_contato": "+55 11 91234-0059",
+      "moradores": [
+        "Giovana Rocha",
+        "André Silva"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1006,
+      "telefone_contato": "+55 11 91234-0060",
+      "moradores": [
+        "Carla Costa",
+        "Rafael Lima"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1101,
+      "telefone_contato": "+55 11 91234-0061",
+      "moradores": [
+        "João Silva",
+        "Maria Oliveira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1102,
+      "telefone_contato": "+55 11 91234-0062",
+      "moradores": [
+        "Ana Paula Silva",
+        "Lucas Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1103,
+      "telefone_contato": "+55 11 91234-0063",
+      "moradores": [
+        "Ricardo Lima",
+        "Simone Santos"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1104,
+      "telefone_contato": "+55 11 91234-0064",
+      "moradores": [
+        "Rogério Rocha"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1105,
+      "telefone_contato": "+55 11 91234-0065",
+      "moradores": [
+        "Carlos Rocha",
+        "Amanda Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1106,
+      "telefone_contato": "+55 11 91234-0066",
+      "moradores": [
+        "Gustavo Lima",
+        "Juliana Martins"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1201,
+      "telefone_contato": "+55 11 91234-0067",
+      "moradores": [
+        "Joana Souza",
+        "Carlos Alberto"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1202,
+      "telefone_contato": "+55 11 91234-0068",
+      "moradores": [
+        "Alberto Lima",
+        "Paula Rocha"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1203,
+      "telefone_contato": "+55 11 91234-0069",
+      "moradores": [
+        "Tatiane Souza",
+        "Felipe Costa"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1204,
+      "telefone_contato": "+55 11 91234-0070",
+      "moradores": [
+        "Rogério Silva"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1205,
+      "telefone_contato": "+55 11 91234-0071",
+      "moradores": [
+        "Marcela Lima",
+        "Douglas Ferreira"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    },
+    {
+      "apartamento": 1206,
+      "telefone_contato": "+55 11 91234-0072",
+      "moradores": [
+        "Raquel Martins",
+        "Carlos José"
+      ],
+      "vistoria": {
+        "gás": "2025-02-17",
+        "água": "2025-02-17"
+      }
+    }
+  ]
+}
