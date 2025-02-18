@@ -3,12 +3,14 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('./models/User');
-const Condominio = require('./models/condominio');
-const apt = require('./models/apt');
 const verificarToken = require('./middlewares/verificarToken');
 const { body, validationResult } = require('express-validator');
 const cors = require('cors');
+
+const User = require('./models/User');
+const Condominio = require('./models/condominio');
+const Apartamento = require('./models/apartamento');
+
 
 dotenv.config();
 const app = express();
@@ -32,7 +34,6 @@ app.use(express.json());
 // Permitir requisições de qualquer origem
 app.use(cors());
 
-// Rota de cadastro com validação (nome, email, e senha)
 // Rota de cadastro com validação (nome, email, e senha)
 app.post('/cadastro', [
   body('email').isEmail().withMessage('Por favor, forneça um e-mail válido'),
@@ -136,18 +137,38 @@ app.post('/login', async (req, res) => {
 
 
 // Rota para criar um novo apartamento
-app.post('/apartamentos', verificarToken, async (req, res) => {
+// app.post('/apartamento', verificarToken, async (req, res) => {
+//   try {
+//     const novoApartamento = new apt(req.body);
+//     await novoApartamento.save();
+//     res.status(201).json(novoApartamento);
+//   } catch (err) {
+//     res.status(400).json({ message: 'Erro ao criar apartamento', error: err });
+//   }
+// });
+
+// Rota para receber o cadastro de apartamento
+app.post('/apartamento', verificarToken, async (req, res) => {
   try {
-    const novoApartamento = new apt(req.body);
+    const { apartamento, telefone_contato, moradores, tipo_pessoa, vistoria } = req.body;
+
+    const novoApartamento = new Apartamento({
+      apartamento,
+      telefone_contato,
+      moradores,
+      tipo_pessoa,
+      vistoria
+    });
+
     await novoApartamento.save();
-    res.status(201).json(novoApartamento);
-  } catch (err) {
-    res.status(400).json({ message: 'Erro ao criar apartamento', error: err });
+    res.status(201).json({ message: 'Apartamento cadastrado com sucesso!', data: novoApartamento });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
 });
 
 // Rota para buscar todos os apartamentos
-app.get('/apartamentos', verificarToken, async (req, res) => {
+app.get('/apartamento', async (req, res) => {
   try {
     const apartamentos = await apt.find();
     res.status(200).json(apartamentos);

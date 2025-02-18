@@ -22,7 +22,7 @@ const Home = () => {
       </div>
       <div style={{ marginTop: '20px' }}>
         <button
-          onClick={() => handleNavigate('/apartamento/buscar')} // Caminho corrigido
+          onClick={() => handleNavigate('/buscar')} // Caminho corrigido
           style={buttonStyle}
         >
           Buscar por Apartamento
