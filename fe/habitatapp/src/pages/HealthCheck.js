@@ -1,4 +1,3 @@
-// src/pages/HealthCheck.js
 import React from 'react';
 
 const HealthCheck = () => {

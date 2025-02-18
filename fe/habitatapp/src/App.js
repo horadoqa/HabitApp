@@ -4,7 +4,7 @@ import HealthCheck from './pages/HealthCheck';
 import Login from './pages/Login';
 import Usuario from './pages/Usuario/Cadastrar';
 import Apartamento from './pages/Apartamento/Cadastrar';
-// import Home from './pages/Home';
+import Home from './pages/Home/Home';
 
 const App = () => {
   const [token, setToken] = useState('');
@@ -14,10 +14,10 @@ const App = () => {
       <Routes>
         <Route path="/healthcheck" element={<HealthCheck />} />
         
-        {/* <Route path="/home" element={<Home />} /> */}
-        
         {/* Rota para Login */}
         <Route path="/" element={<Login setToken={setToken} />} />
+        
+        <Route path="/home" element={<Home />} />
                 
         {/* Rota para Usuário*/}
         <Route path="/usuario" element={<Usuario />} />
