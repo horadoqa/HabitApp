@@ -34,7 +34,7 @@ const Login = ({ setToken }) => {
       <div className="left-side">
         {/* Aqui pode adicionar qualquer conteúdo extra para a coluna da esquerda */}
         <div className="login-left">
-          <h1>Bem-vindo ao HabitatApp!</h1>
+          <h1>Bem-vindo ao HabitApp!</h1>
           <img src={buildingImage} alt="Prédio" />
           <h2>Faça login para continuar</h2>
         </div>
