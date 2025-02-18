@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Cadastrar.css';  
+
 
 const Cadastro = () => {
   const [nome, setNome] = useState('');

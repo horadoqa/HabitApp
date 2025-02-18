@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Apartamento = () => {
   const [apartamento, setApartamento] = useState('');
@@ -6,7 +7,7 @@ const Apartamento = () => {
   const [moradores, setMoradores] = useState(['', '']);
   const [vistoriaGás, setVistoriaGás] = useState('');
   const [vistoriaÁgua, setVistoriaÁgua] = useState('');
-  const [tipoPessoa, setTipoPessoa] = useState(''); // Estado para o tipo (Locador ou Locatário)
+  const [tipoPessoa, setTipoPessoa] = useState('');
 
   // Função para atualizar o estado dos moradores
   const handleMoradorChange = (index, value) => {
@@ -16,7 +17,7 @@ const Apartamento = () => {
   };
 
   // Função para lidar com o envio do formulário
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // Criar o objeto do apartamento
@@ -24,7 +25,7 @@ const Apartamento = () => {
       apartamento,
       telefone_contato: telefoneContato,
       moradores,
-      tipo_pessoa: tipoPessoa, // Adicionando tipo de pessoa (Locador ou Locatário)
+      tipo_pessoa: tipoPessoa,
       vistoria: {
         gás: vistoriaGás,
         água: vistoriaÁgua,
@@ -33,7 +34,26 @@ const Apartamento = () => {
 
     console.log('Dados do apartamento:', apartamentoData);
 
-    // Aqui você pode adicionar a lógica de envio para o backend
+    // Recuperar o token JWT armazenado (assumindo que você o guardou no localStorage após login)
+    const token = localStorage.getItem('token'); // ou sessionStorage.getItem('token') se usou sessionStorage
+
+    try {
+      // Enviar os dados para o servidor usando axios com o token no cabeçalho
+      const response = await axios.post('http://localhost:3000/apartamento', apartamentoData, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`, // Adicionando o token no cabeçalho
+        },
+      });
+
+      // Exibir a resposta do servidor
+      alert('Apartamento cadastrado com sucesso!');
+      console.log('Resposta do servidor:', response.data);
+    } catch (error) {
+      // Se ocorrer um erro, exibir o erro
+      console.error('Erro ao enviar dados:', error);
+      alert(`Erro ao cadastrar apartamento: ${error.response ? error.response.data.message : error.message}`);
+    }
   };
 
   return (
@@ -109,8 +129,6 @@ const Apartamento = () => {
             onChange={(e) => setVistoriaÁgua(e.target.value)}
             required
           />
-
-          
 
           <button type="submit">Cadastrar Apartamento</button>
         </form>

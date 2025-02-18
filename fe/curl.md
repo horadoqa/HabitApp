@@ -21,5 +21,5 @@ curl -X DELETE http://localhost:3000/usuario -H "Content-Type: application/json"
 ## Cadastrar Apartamento
 
 ```bash
-curl -X POST http://localhost:3001/apartamento -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjNmNGVmZDkxNWM3Mjc0MmU3ZTZhNyIsImVtYWlsIjoicmZhaGhhbUBnbWFpbC5jb20iLCJpYXQiOjE3Mzk5MDkxMzQsImV4cCI6MTczOTkxMjczNH0.7c3nsCrsGVQfLM_aiZUzVzYv-x0OhYw-bbW85nFhB4M" -d '{"apartamento": "804", "telefone_contato": "+55 21 98002-5474", "moradores": ["Ricardo Fahham", "Alessandra Rodrigues Miranda"], "tipo_pessoa": "locatário", "vistoria": { "gás": "2025-02-18", "água": "2025-02-18"}}'
+curl -X POST http://localhost:3000/apartamento -H "Content-Type: application/json" -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3YjNmNGVmZDkxNWM3Mjc0MmU3ZTZhNyIsImVtYWlsIjoicmZhaGhhbUBnbWFpbC5jb20iLCJpYXQiOjE3Mzk5MDkxMzQsImV4cCI6MTczOTkxMjczNH0.7c3nsCrsGVQfLM_aiZUzVzYv-x0OhYw-bbW85nFhB4M" -d '{"apartamento": "804", "telefone_contato": "+55 21 98002-5474", "moradores": ["Ricardo Fahham", "Alessandra Rodrigues Miranda"], "tipo_pessoa": "locatário", "vistoria": { "gás": "2025-02-18", "água": "2025-02-18"}}'
 ```

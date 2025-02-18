@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Importando os componentes de Home
 import HealthCheck from './pages/HealthCheck';
 import Login from './pages/Login';
-import Usuario from './pages/Usuario/Cadastrar';
-import Apartamento from './pages/Apartamento/Cadastrar';
 import Home from './pages/Home/Home';
+
+// Importando os componentes de Usuários
+import CadastrarApartamento from './pages/Apartamento/Cadastrar';
+import CadastrarUsuario from './pages/Usuario/Cadastrar';
+
+// Importando os componentes de Apartamento
+import AlterarApartamento from './pages/Apartamento/Alterar';
+import BuscarApartamento from './pages/Apartamento/Buscar';
 
 const App = () => {
   const [token, setToken] = useState('');
@@ -18,17 +26,17 @@ const App = () => {
         <Route path="/" element={<Login setToken={setToken} />} />
         
         <Route path="/home" element={<Home />} />
-                
-        {/* Rota para Usuário*/}
-        <Route path="/usuario" element={<Usuario />} />
         
-        {/* Rota para Apartamento*/}
-        <Route path="/apartamento" element={<Apartamento />} />
-
+        {/* Rota para Usuário */}
+        <Route path="/cadastrar" element={<CadastrarUsuario />} />
+        
+        {/* Rota para Apartamento */}
+        <Route path="/apartamento/cadastrar" element={<CadastrarApartamento />} />
+        <Route path="/apartamento/alterar" element={<AlterarApartamento />} />
+        <Route path="/apartamento/buscar" element={<BuscarApartamento />} />
       </Routes>
     </Router>
   );
 };
-
 
 export default App;
