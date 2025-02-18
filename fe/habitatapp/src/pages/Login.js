@@ -69,7 +69,7 @@ const Login = ({ setToken }) => {
 
           {/* Botão de navegação para o cadastro */}
           <p>
-            <button onClick={() => navigate('/cadastro')}>Cadastre-se</button>
+            <button onClick={() => navigate('/usuario')}>Cadastre-se</button>
           </p>
         </div>
       </div>

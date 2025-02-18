@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HealthCheck from './pages/HealthCheck';
 import Login from './pages/Login';
-import Cadastro from './pages/Cadastro';
+import Usuario from './pages/Usuario';
 import Apartamento from './pages/Apartamento';
+// import Home from './pages/Home';
 
 const App = () => {
   const [token, setToken] = useState('');
@@ -15,9 +16,10 @@ const App = () => {
         <Route path="/" element={<Login setToken={setToken} />} />
         
         {/* Rota para Cadastro */}
-        <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/healthcheck" element={<HealthCheck />} />
+        <Route path="/usuario" element={<Usuario />} />
         <Route path="/apartamento" element={<Apartamento />} />
+        {/* <Route path="/home" element={<Home />} /> */}
       </Routes>
     </Router>
   );
