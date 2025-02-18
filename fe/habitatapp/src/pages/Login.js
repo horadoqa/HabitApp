@@ -24,6 +24,9 @@ const Login = ({ setToken }) => {
       // Atualiza o estado com o token
       setToken(token);
 
+      // Redireciona para a página /home após login bem-sucedido
+      navigate('/home');
+
     } catch (err) {
       setError('Falha ao autenticar. Verifique suas credenciais.');
     }
@@ -39,7 +42,6 @@ const Login = ({ setToken }) => {
           <h2>Faça login para continuar</h2>
         </div>
       </div>
-
 
       <div className="right-side">
         <div className="container">

@@ -31,7 +31,7 @@ const App = () => {
         <Route path="/cadastrar" element={<CadastrarUsuario />} />
         
         {/* Rota para Apartamento */}
-        <Route path="/apartamento/cadastrar" element={<CadastrarApartamento />} />
+        <Route path="/apartamento" element={<CadastrarApartamento />} />
         <Route path="/apartamento/alterar" element={<AlterarApartamento />} />
         <Route path="/apartamento/buscar" element={<BuscarApartamento />} />
       </Routes>

@@ -1,4 +1,3 @@
-// src/pages/Home/Home.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom'; // Importe o useNavigate para navegação
 
@@ -14,7 +13,7 @@ const Home = () => {
       <h1>Bem-vindo à página inicial</h1>
       <div style={{ marginTop: '30px' }}>
         <button
-          onClick={() => handleNavigate('/apartamento')} // Caminho corrigido
+          onClick={() => handleNavigate('/apartamento')} // Caminho para Cadastrar.js
           style={buttonStyle}
         >
           Cadastrar Apartamento
@@ -22,7 +21,7 @@ const Home = () => {
       </div>
       <div style={{ marginTop: '20px' }}>
         <button
-          onClick={() => handleNavigate('/buscar')} // Caminho corrigido
+          onClick={() => handleNavigate('/buscar')} // Caminho para Buscar
           style={buttonStyle}
         >
           Buscar por Apartamento
@@ -30,7 +29,7 @@ const Home = () => {
       </div>
       <div style={{ marginTop: '20px' }}>
         <button
-          onClick={() => handleNavigate('/apartamento/alterar')} // Caminho corrigido
+          onClick={() => handleNavigate('/apartamento/alterar')} // Caminho para Alterar
           style={buttonStyle}
         >
           Alterar Dados de Apartamento
