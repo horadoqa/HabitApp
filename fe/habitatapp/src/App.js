@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MenuBurger from './components/MenuBurger'; // Importe o componente MenuBurger
 
 // Importando os componentes de Home
 import HealthCheck from './pages/HealthCheck';
@@ -21,6 +22,7 @@ const App = () => {
 
   return (
     <Router>
+      <MenuBurger /> {/* Colocando o menu em todas as páginas */}
       <Routes>
         <Route path="/healthcheck" element={<HealthCheck />} />
         
