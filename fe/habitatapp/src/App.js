@@ -14,7 +14,7 @@ import CadastrarUsuario from './pages/Usuario/Cadastrar';
 import AlterarApartamento from './pages/Apartamento/Alterar';
 import BuscarApartamento from './pages/Apartamento/Buscar';
 import EnviarComunicado from './pages/Apartamento/Comunicado';
-import BuscarNome from './pages/Apartamento/BuscarNome';
+import BuscarMoradores from './pages/Apartamento/BuscarMoradores';
 
 const App = () => {
   const [token, setToken] = useState('');
@@ -37,7 +37,7 @@ const App = () => {
         <Route path="/apartamento/alterar" element={<AlterarApartamento />} />
         <Route path="/apartamento/buscar" element={<BuscarApartamento />} />
         <Route path="/apartamento/comunicado" element={<EnviarComunicado />} />
-        <Route path="/apartamento/buscar-nome" element={<BuscarNome />} />
+        <Route path="/apartamento/buscar-moradores" element={<BuscarMoradores />} />
       </Routes>
     </Router>
   );

@@ -29,7 +29,7 @@ const Home = () => {
       </div>
       <div style={{ marginTop: '20px' }}>
         <button
-          onClick={() => handleNavigate('/apartamento/buscar-nome')}
+          onClick={() => handleNavigate('/apartamento/buscar-moradores')}
           style={buttonStyle}
         >
           Buscar por Nome

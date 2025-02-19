@@ -182,6 +182,35 @@ app.get('/apartamentos', async (req, res) => {
   }
 });
 
+// Rota para buscar apartamentos pelo nome do morador
+app.get('/apartamento/buscar/:nome', async (req, res) => {
+  const { nome } = req.params;
+
+  try {
+    console.log('Buscando por nome:', nome); // Para depuração
+
+    // Usando $regex para buscar no array de moradores
+    const apartamentos = await Apartamento.find({
+      moradores: { $elemMatch: { $regex: new RegExp(nome, 'i') } }
+    });
+
+    // Se não encontrar apartamentos, retorna uma mensagem de erro
+    if (apartamentos.length === 0) {
+      return res.status(404).json({ message: 'Apartamento não encontrado' });
+    }
+
+    // Filtra os apartamentos para garantir que o mesmo apartamento não apareça mais de uma vez
+    const apartamentosUnicos = apartamentos.map(apartamento => ({
+      numero_apartamento: apartamento.apartamento
+    }));
+
+    // Retorna todos os apartamentos encontrados
+    res.status(200).json(apartamentosUnicos);
+  } catch (err) {
+    res.status(400).json({ message: 'Erro ao buscar apartamento', error: err });
+  }
+});
+
 
 // Rota para criar um novo condomínio
 app.post('/condominio', verificarToken, async (req, res) => {
