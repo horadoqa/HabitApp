@@ -204,6 +204,32 @@ app.get('/condominio', verificarToken, async (req, res) => {
   }
 });
 
+// Rota para enviar um comunicado
+app.post('/comunicado', async (req, res) => {
+  const { titulo, mensagem, data } = req.body;
+
+  // Validando os dados recebidos
+  if (!titulo || !mensagem || !data) {
+    return res.status(400).json({ message: 'Todos os campos são obrigatórios!' });
+  }
+
+  try {
+    // Salvar o comunicado no banco de dados (ou enviar por e-mail, etc.)
+    const novoComunicado = new Comunicado({
+      titulo,
+      mensagem,
+      data,
+    });
+
+    await novoComunicado.save();
+    res.status(201).json({ message: 'Comunicado enviado com sucesso!' });
+  } catch (err) {
+    console.error('Erro ao enviar comunicado:', err);
+    res.status(500).json({ message: 'Erro ao enviar comunicado.' });
+  }
+});
+
+
 // Iniciar o servidor
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);

@@ -13,7 +13,7 @@ const Home = () => {
       <h1>Bem-vindo à página inicial</h1>
       <div style={{ marginTop: '30px' }}>
         <button
-          onClick={() => handleNavigate('/apartamento/')} // Caminho para Cadastrar.js
+          onClick={() => handleNavigate('/apartamento/')}
           style={buttonStyle}
         >
           Cadastrar Apartamento
@@ -21,7 +21,7 @@ const Home = () => {
       </div>
       <div style={{ marginTop: '20px' }}>
         <button
-          onClick={() => handleNavigate('/apartamento/buscar')} // Caminho para Buscar
+          onClick={() => handleNavigate('/apartamento/buscar')}
           style={buttonStyle}
         >
           Buscar por Apartamento
@@ -29,10 +29,27 @@ const Home = () => {
       </div>
       <div style={{ marginTop: '20px' }}>
         <button
-          onClick={() => handleNavigate('/apartamento/alterar')} // Caminho para Alterar
+          onClick={() => handleNavigate('/apartamento/buscar-nome')}
+          style={buttonStyle}
+        >
+          Buscar por Nome
+        </button>
+      </div>
+      <div style={{ marginTop: '20px' }}>
+        <button
+          onClick={() => handleNavigate('/apartamento/alterar')}
           style={buttonStyle}
         >
           Alterar Dados de Apartamento
+        </button>
+      </div>
+
+      <div style={{ marginTop: '20px' }}>
+        <button
+          onClick={() => handleNavigate('/apartamento/comunicado')}
+          style={buttonStyle}
+        >
+          Enviar Comunicado
         </button>
       </div>
     </div>

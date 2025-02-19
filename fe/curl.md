@@ -29,3 +29,10 @@ curl -X POST http://localhost:3000/apartamento -H "Content-Type: application/jso
 curl -X GET http://localhost:3000/apartamentos | jq | grep apartamento
 ```
 
+## Comunicado
+
+```bash
+curl -X POST http://localhost:3000/comunicado \
+  -H "Content-Type: application/json" \
+  -d '{"titulo": "Novo Comunicado", "mensagem": "Este é um comunicado importante", "data": "2025-02-18"}'
+```
