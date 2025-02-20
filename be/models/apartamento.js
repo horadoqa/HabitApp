@@ -13,21 +13,26 @@ const apartamentoSchema = new mongoose.Schema({
   },
   moradores: [{ 
     type: String, 
-    required: true 
+    required: true // Se você deseja garantir que sempre haja um morador
   }],
   email: { 
-    type: String, 
-    required: true,
+    type: [String],
+    required: true, // Torna o campo email obrigatório
     match: [/^\S+@\S+\.\S+$/, 'Por favor, insira um e-mail válido']
+  },
+  tipoPessoa: { 
+    type: String,
+    enum: ['locador', 'locatário'], // Define os valores possíveis para 'tipoPessoa'
+    required: true // Torna este campo obrigatório
   },
   vistoria: {
     gás: {
       type: Date, 
-      required: true
+      required: true // Torna a data de vistoria de gás obrigatória
     },
     água: {
       type: Date, 
-      required: true
+      required: true // Torna a data de vistoria de água obrigatória
     }
   }
 }, { timestamps: true });  // timestamps para adicionar createdAt e updatedAt automaticamente

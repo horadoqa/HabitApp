@@ -139,23 +139,36 @@ app.post('/login', async (req, res) => {
 // Rota para receber o cadastro de apartamento
 app.post('/apartamento', verificarToken, async (req, res) => {
   try {
-    const { apartamento, telefone_contato, moradores, tipo_pessoa, vistoria } = req.body;
 
+    console.log('Dados recebidos no backend:', req.body);
+    // Desestruturando os dados recebidos na requisição
+    const { apartamento, telefone_contato, moradores, email, tipoPessoa, vistoria } = req.body;
+
+    // Verificando se todos os campos obrigatórios foram enviados
+    if (!apartamento || !telefone_contato || !email || !moradores || !tipoPessoa) {
+      return res.status(400).json({ message: 'Todos os campos obrigatórios devem ser preenchidos.' });
+    }
+
+    // Criando o novo apartamento com os dados fornecidos
     const novoApartamento = new Apartamento({
       apartamento,
       telefone_contato,
       moradores,
-      tipo_pessoa,
+      email,
+      tipoPessoa, // Certifique-se de que o campo seja 'tipoPessoa'
       vistoria
     });
 
+    // Salvando o novo apartamento no banco de dados
     await novoApartamento.save();
+
+    // Retornando sucesso
     res.status(201).json({ message: 'Apartamento cadastrado com sucesso!', data: novoApartamento });
   } catch (error) {
+    console.error('Erro ao cadastrar apartamento:', error);
     res.status(400).json({ error: error.message });
   }
 });
-
 
 // Rota para buscar um apartamento específico por número
 app.get('/apartamento/:numeroApartamento', async (req, res) => {
@@ -213,7 +226,6 @@ app.get('/apartamento/buscar/:nome', async (req, res) => {
   }
 });
 
-
 // Rota para criar um novo condomínio
 app.post('/condominio', verificarToken, async (req, res) => {
   try {
@@ -267,7 +279,6 @@ app.post('/comunicado', async (req, res) => {
     res.status(500).json({ message: 'Erro ao enviar comunicado.' });
   }
 });
-
 
 
 // Iniciar o servidor

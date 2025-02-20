@@ -41,7 +41,7 @@ const Apartamento = () => {
       telefone_contato: telefoneContato,
       moradores,
       email,
-      tipo_pessoa: tipoPessoa,
+      tipoPessoa: tipoPessoa,
       vistoria: {
         gás: vistoriaGás,
         água: vistoriaÁgua,
@@ -122,18 +122,18 @@ const Apartamento = () => {
               value={email[0]}
               onChange={(e) => handleEmailChange(0, e.target.value)}
               placeholder="Email do morador 1"
-              required
+
             />
             <input
               type="email"
               value={email[1]}
               onChange={(e) => handleEmailChange(1, e.target.value)}
               placeholder="Email do morador 2"
-              required
+
             />
           </div>
 
-          {/* Select para Locador ou Locatário */}
+          {/* Select para Proprietário ou Locatário */}
           <label htmlFor="tipoPessoa">Condição</label>
           <select
             id="tipoPessoa"
@@ -142,7 +142,7 @@ const Apartamento = () => {
             required
           >
             <option value="">Selecione</option>
-            <option value="locador">Locador</option>
+            <option value="locador">Proprietário</option>
             <option value="locatário">Locatário</option>
           </select>
 
@@ -152,7 +152,7 @@ const Apartamento = () => {
             id="vistoria_gas"
             value={vistoriaGás}
             onChange={(e) => setVistoriaGás(e.target.value)}
-            required
+
           />
 
           <label htmlFor="vistoria_agua">Vistoria de Água:</label>
@@ -161,7 +161,7 @@ const Apartamento = () => {
             id="vistoria_agua"
             value={vistoriaÁgua}
             onChange={(e) => setVistoriaÁgua(e.target.value)}
-            required
+
           />
 
           <button type="submit">Cadastrar Apartamento</button>
