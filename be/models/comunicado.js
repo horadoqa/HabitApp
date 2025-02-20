@@ -9,7 +9,16 @@ const comunicadoSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  data: {
+  tipoManutencao: {
+    type: String,
+    enum: ['Eletrica', 'Hidraulica', 'Estrutural'], // Os valores permitidos
+    required: true,
+  },
+  datadoenvio: {
+    type: Date,
+    required: true,
+  },
+  datadoevento: {
     type: Date,
     required: true,
   },

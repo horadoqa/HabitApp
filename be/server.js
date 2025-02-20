@@ -11,6 +11,8 @@ const User = require('./models/User');
 const Condominio = require('./models/condominio');
 const Apartamento = require('./models/apartamento');
 
+const Comunicado = require('./models/comunicado');
+
 
 dotenv.config();
 const app = express();
@@ -235,28 +237,37 @@ app.get('/condominio', verificarToken, async (req, res) => {
 
 // Rota para enviar um comunicado
 app.post('/comunicado', async (req, res) => {
-  const { titulo, mensagem, data } = req.body;
+  const { titulo, mensagem, tipoManutencao, datadoenvio, datadoevento } = req.body;
+
+  // Log para verificar os dados que chegaram no servidor
+  console.log('Dados recebidos:', req.body);
 
   // Validando os dados recebidos
-  if (!titulo || !mensagem || !data) {
+  if (!titulo || !mensagem || !tipoManutencao || !datadoenvio || !datadoevento) {
+    console.log('Erro na validação dos campos');
     return res.status(400).json({ message: 'Todos os campos são obrigatórios!' });
   }
 
   try {
-    // Salvar o comunicado no banco de dados (ou enviar por e-mail, etc.)
+    // Salvar o comunicado no banco de dados
     const novoComunicado = new Comunicado({
       titulo,
       mensagem,
-      data,
+      tipoManutencao,
+      datadoenvio,
+      datadoevento
     });
 
     await novoComunicado.save();
+    console.log('Comunicado salvo com sucesso!');
+
     res.status(201).json({ message: 'Comunicado enviado com sucesso!' });
   } catch (err) {
-    console.error('Erro ao enviar comunicado:', err);
+    console.error('Erro ao salvar comunicado:', err);
     res.status(500).json({ message: 'Erro ao enviar comunicado.' });
   }
 });
+
 
 
 // Iniciar o servidor
