@@ -15,6 +15,11 @@ const apartamentoSchema = new mongoose.Schema({
     type: String, 
     required: true 
   }],
+  email: { 
+    type: String, 
+    required: true,
+    match: [/^\S+@\S+\.\S+$/, 'Por favor, insira um e-mail válido']
+  },
   vistoria: {
     gás: {
       type: Date, 

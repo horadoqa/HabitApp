@@ -5,6 +5,7 @@ const Apartamento = () => {
   const [apartamento, setApartamento] = useState('');
   const [telefoneContato, setTelefoneContato] = useState('');
   const [moradores, setMoradores] = useState(['', '']);
+  const [email, setEmail] = useState(['', '']);
   const [vistoriaGás, setVistoriaGás] = useState('');
   const [vistoriaÁgua, setVistoriaÁgua] = useState('');
   const [tipoPessoa, setTipoPessoa] = useState('');
@@ -16,15 +17,30 @@ const Apartamento = () => {
     setMoradores(newMoradores);
   };
 
+  // Função para atualizar o estado dos emails
+  const handleEmailChange = (index, value) => {
+    const newEmails = [...email];
+    newEmails[index] = value;
+    setEmail(newEmails);
+  };
+
   // Função para lidar com o envio do formulário
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validando formato do e-mail (exemplo simples)
+    const emailValido = email.every((e) => /^\S+@\S+\.\S+$/.test(e));
+    if (!emailValido) {
+      alert('Por favor, insira um ou mais e-mails válidos.');
+      return;
+    }
 
     // Criar o objeto do apartamento
     const apartamentoData = {
       apartamento,
       telefone_contato: telefoneContato,
       moradores,
+      email,
       tipo_pessoa: tipoPessoa,
       vistoria: {
         gás: vistoriaGás,
@@ -57,7 +73,7 @@ const Apartamento = () => {
   };
 
   return (
-    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+    <div style={{ marginTop: '50px' }}>
       <h1>Cadastrar Apartamento</h1>
 
       <div className="container">
@@ -95,6 +111,24 @@ const Apartamento = () => {
               value={moradores[1]}
               onChange={(e) => handleMoradorChange(1, e.target.value)}
               placeholder="Nome do morador 2"
+              required
+            />
+          </div>
+
+          <label>Emails:</label>
+          <div className="email">
+            <input
+              type="email"
+              value={email[0]}
+              onChange={(e) => handleEmailChange(0, e.target.value)}
+              placeholder="Email do morador 1"
+              required
+            />
+            <input
+              type="email"
+              value={email[1]}
+              onChange={(e) => handleEmailChange(1, e.target.value)}
+              placeholder="Email do morador 2"
               required
             />
           </div>
